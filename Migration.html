@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migration to Medina</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: white;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        .hero-section {
+            background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            padding: 100px 0;
+            text-align: center;
+            animation: fadeIn 2s;
+        }
+        .navbar {
+            background-color: #2a5298;
+        }
+        .navbar-nav .nav-link {
+            color: white !important;
+            transition: color 0.3s;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffdd57 !important;
+        }
+        .content-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .content-card:hover {
+            transform: scale(1.03);
+        }
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .video-container h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            color: #2a5298;
+        }
+        .back-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .back-button a {
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            color: white;
+            font-weight: bold;
+            padding: 14px 28px;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+            font-size: 1.2rem;
+        }
+        .back-button a:hover {
+            background: linear-gradient(to right, #ff4b2b, #ff416c);
+            transform: scale(1.15);
+        }
+        footer {
+            background-color: #1e3c72;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero-section">
+        <h1>Migration to Medina</h1>
+        <p>The historic journey of Prophet Muhammad (PBUH) to Medina</p>
+    </header>
+    
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand text-white" href="index.html">Seerat-e-Nabvi</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hijrah">Hijrah</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#impact">Impact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="container mt-4">
+        <div class="content-card" id="hijrah">
+            <h2 class="text-center">The Journey of Hijrah</h2>
+            <p>Prophet Muhammad (PBUH) and his followers migrated to Medina to escape persecution in Mecca. This journey marked the beginning of the Islamic calendar and the formation of the first Islamic state.</p>
+        </div>
+        <div class="content-card" id="impact">
+            <h2 class="text-center">Impact of Migration</h2>
+            <p>The migration united the Ansar (Helpers) and Muhajirun (Emigrants), laying the foundation for a just and inclusive society based on Islamic principles.</p>
+        </div>
+        <div class="content-card">
+            <div class="video-container">
+                <h3>Watch the Video on Migration to Medina</h3>
+                <iframe width="656" height="369" src="https://www.youtube.com/embed/KR9PtysJymw" title="Hijrah to Madina | Part 1 | Beginning of Islamic Calendar  | Molana Tariq Jameel 23 Sep 2020" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+               
+                <p style="margin-top: 10px; font-size: 1rem; color: #555;">Learn more about the significance of the migration and its impact on Islamic history.</p>
+            </div>
+        </div>
+        <div class="back-button">
+            <a href="index.html">← Back to Home</a>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Seerat-e-Nabvi Website. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
