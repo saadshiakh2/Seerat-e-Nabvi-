@@ -12,7 +12,6 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            transition: background-color 0.5s, color 0.5s;
             background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
             color: white;
             overflow-x: hidden;
@@ -25,59 +24,61 @@
             max-width: 950px;
             animation: fadeIn 1s ease-in-out;
             backdrop-filter: blur(10px);
-            position: relative;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .btn-custom {
-            background: linear-gradient(135deg, #ff8c00, #ff2e63);
-            border: none;
-            color: white;
-            padding: 14px 40px;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease-in-out;
-            box-shadow: 0 5px 20px rgba(255, 99, 71, 0.5);
+        .leader-card {
+            background: linear-gradient(135deg, #ff7eb3, #ff4b2b);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(255, 100, 100, 0.6);
+            margin-bottom: 30px;
             position: relative;
             overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-        .btn-custom::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.3);
-            transition: left 0.5s ease-in-out;
+        .leader-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(255, 100, 100, 0.8);
         }
-        .btn-custom:hover::after {
-            left: 100%;
+        .leader-card img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-bottom: 15px;
+            transition: transform 0.4s, box-shadow 0.4s;
         }
-        .btn-custom:hover {
-            transform: scale(1.1);
+        .leader-card img:hover {
+            transform: scale(1.15);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
         }
-        .dark-mode {
-            background: linear-gradient(135deg, #1a1a2e, #16213e) !important;
-            color: white !important;
+        .leader-card h2 {
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
-        .dark-mode .container-box {
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
+        .leader-card p {
+            font-size: 20px;
+            font-style: italic;
         }
-        .card {
-            transition: transform 0.3s ease-in-out;
-            border-radius: 15px;
+        .group-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .member-card {
             background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(5px);
-            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
             box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-        .card:hover {
-            transform: scale(1.1);
-            box-shadow: 0 10px 40px rgba(255, 255, 255, 0.3);
+        .member-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
         }
     </style>
 </head>
@@ -85,33 +86,39 @@
     <div class="container-box text-center">
         <h1 class="fw-bold"><i class="fas fa-info-circle"></i> About Us</h1>
         <p class="text-light">Discover our mission, vision, and values.</p>
-        <button class="btn btn-custom mb-3" onclick="toggleDarkMode()"><i class="fas fa-moon"></i> Toggle Dark Mode</button>
-        <a href="index.html" class="btn btn-custom mb-3"><i class="fas fa-arrow-left"></i> Back</a>
-        <div class="bg-primary text-white py-3 rounded-3 shadow-sm">
-            <h2 class="fs-4"><i class="fas fa-university"></i> Hyderabad Institute of Technology and Management Sciences</h2>
+        <h3 class="mt-4">Our Leader</h3>
+        <div class="leader-card">
+            <img src="saad.jpg" alt="Shaikh Saad">
+            <h2>Shaikh Saad</h2>
+            <p>Team Leader | Visionary & Innovator</p>
+            <p><strong>Hyderabad Institute of Technology and Management Sciences</strong></p>
         </div>
-        <div class="row mt-4">
-            <div class="col-md-6 mb-3">
-                <div class="card p-4 rounded-3 shadow-sm">
-                    <h3 class="fs-5"><i class="fas fa-users"></i> Group Name:</h3>
-                    <p class="fs-6">Siraat-e-Mustaqeem</p>
-                </div>
-            </div>
-            <div class="col-md-6 mb-3">
-                <div class="card p-4 rounded-3 shadow-sm">
-                    <h3 class="fs-5"><i class="fas fa-chalkboard-teacher"></i> Class:</h3>
-                    <p class="fs-6">SE 2</p>
-                </div>
-            </div>
+        <h3 class="mt-4">Group Members</h3>
+        <div class="group-members">
+            <div class="member-card">Ahsan Chishti</div>
+            <div class="member-card">Uzair Ahmed</div>
+            <div class="member-card">Fashia</div>
+            <div class="member-card">Ayesha</div>
+            <div class="member-card">Moiz Deswali</div>
+            <div class="member-card">Haris</div>
+            <div class="member-card">Syeda Summaiya</div>
+            <div class="member-card">Maryam Shaikh</div>
+            <div class="member-card">Moiz</div>
+            <div class="member-card">Humna</div>
+            <div class="member-card">Alisha Gul</div>
+            <div class="member-card">Abeera Aleem</div>
+            <div class="member-card">Jai Kumar</div>
+            <div class="member-card">Jaweria</div>
+            <div class="member-card">Janka Kumari</div>
+            <div class="member-card">Rehman</div>
         </div>
         <footer class="mt-4 text-light small">
             &copy; 2025 Seerat-e-Nabvi Website. All Rights Reserved.
         </footer>
     </div>
-    <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle("dark-mode");
-        }
-    </script>
+    <div class="text-center mt-4">
+        <a href="index.html" class="btn btn-light btn-lg">⬅ Back to Home</a>
+    </div>
 </body>
 </html>
+
